@@ -6,7 +6,7 @@
     {n:'Analis Kebijakan Ahli'},
     {n:'Penelaah Teknis Kebijakan'},
     {n:'Pengolah Data dan Informasi'},
-    {n:'Pimpinan PTN/LLDIKTI/Kementerian/Lembaga terkait'},
+    {n:'Pimpinan PTN/LLDIKTI/Kementerian/ Lembaga terkait'},
     {n:'Asesor Nasional Lektor Kepala dan Profesor', s:'Tim Asesor Nasional'},
     {n:'Pakar', s:'Tim Pleno'}
   ];
