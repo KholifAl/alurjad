@@ -247,7 +247,7 @@
       '<div class="sec"><h3>'+(dec?'Hasil keputusan':'Dilanjutkan ke')+'</h3><div class="nexts">'+
         outs.map(function(e){
           var lbl=e.txt||'Lanjut';
-          return '<button type="button" class="go '+e.kind+'" data-go="'+e.to+'"><i class="dot"></i><span class="gl">'+lbl+'<span class="gtag '+(e.main?'m':'a')+'">'+(e.main?'Ideal':'Sekunder')+'</span></span><span class="gt">Langkah '+e.to+' · '+S[e.to].short+'</span></button>';
+          return '<button type="button" class="go '+e.kind+'" data-go="'+e.to+'"><i class="dot"></i><span class="gl">'+lbl+'<span class="gtag '+(e.main?'m':'a')+'">'+(e.main?'Utama':'Sekunder')+'</span></span><span class="gt">Langkah '+e.to+' · '+S[e.to].short+'</span></button>';
         }).join('')+
         (id==13?'<div class="go end" style="cursor:default"><i class="dot"></i><span class="gl">Selesai</span><span class="gt">Hasil penilaian dipublikasikan di SISTER</span></div>':'')+
       '</div></div>'+
