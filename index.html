@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Alur JAD Dosen Lektor Kepala dan Profesor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div>
+      <div class="spectrum" id="spectrum" aria-hidden="true"></div>
+      <p class="eyebrow">SOP Penilaian Uji Kompetensi</p>
+      <h1>Alur Kenaikan Jabatan Akademik Dosen<br>Lektor Kepala dan Profesor</h1>
+      <!-- <p class="sub">Pilih langkah atau keputusan pada diagram untuk melihat pelaksana, kelengkapan, waktu, dan output.</p> -->
+    </div>
+    <span class="total">Total waktu <b>55</b> hari</span>
+  </header>
+
+  <div class="toolbar">
+    <div class="seg-wrap">
+      <span class="seg-label">Alur</span>
+      <div class="seg" role="group" aria-label="Pilih jenis alur" data-group="flow">
+        <button type="button" data-v="all" aria-pressed="true">Semua</button>
+        <button type="button" data-v="main" aria-pressed="false"><svg width="22" height="8" viewBox="0 0 22 8" aria-hidden="true"><path d="M2 4H20" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>Alur Ideal</button>
+        <button type="button" data-v="alt" aria-pressed="false"><svg width="22" height="8" viewBox="0 0 22 8" aria-hidden="true"><path d="M1 4H21" stroke="currentColor" stroke-width="2" stroke-dasharray="4 3"/></svg>Alur Alternatif</button>
+      </div>
+    </div>
+    <div class="seg-wrap">
+      <span class="seg-label">Jenjang</span>
+      <div class="seg" role="group" aria-label="Pilih jenjang jabatan" data-group="tier">
+        <button type="button" data-v="all" aria-pressed="true">Semua</button>
+        <button type="button" data-v="prof" aria-pressed="false">Profesor</button>
+        <button type="button" data-v="lk" aria-pressed="false">Lektor Kepala</button>
+      </div>
+    </div>
+    <span class="status" id="status" aria-live="polite"></span>
+    <div class="legend" aria-label="Keterangan simbol">
+      <span><i class="lg-p"></i>Proses</span>
+      <span><i class="lg-d"></i>Keputusan</span>
+      <span><i class="lg-l g"></i>Ya / Direkomendasikan</span>
+      <span><i class="lg-l r"></i>Tidak / Belum direkomendasikan</span>
+      <span><i class="lg-l"></i>Alur lanjutan</span>
+      <span><i class="lg-m"></i>Tebal: ideal</span>
+      <span><i class="lg-a"></i>Putus-putus: alternatif</span>
+    </div>
+  </div>
+
+  <main>
+    <div class="boardwrap" id="boardwrap">
+      <div class="board" id="board">
+        <div class="stage" id="stage">
+          <div class="heads" id="heads"></div>
+          <div class="canvas" id="canvas"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="zoom" role="group" aria-label="Perbesar atau perkecil diagram">
+        <button type="button" id="zout" aria-label="Perkecil">−</button>
+        <output id="zval">100%</output>
+        <button type="button" id="zin" aria-label="Perbesar">+</button>
+        <button type="button" id="zfit" aria-label="Sesuaikan lebar layar">Pas lebar</button>
+      </div>
+    </div>
+
+    <aside class="panel" id="panel" aria-live="polite">
+      <div class="empty">
+        <h2>Belum ada langkah dipilih</h2>
+        <p>Klik salah satu kotak pada diagram. Detail langkah akan tampil di sini.</p>
+        <div class="howto">
+          <div><i class="lg-p"></i>Proses: kegiatan yang dikerjakan</div>
+          <div><i class="lg-d"></i>Keputusan: hasilnya menentukan arah alur</div>
+        </div>
+      </div>
+      <div class="detail" id="detail"></div>
+    </aside>
+  </main>
+</div>
+
+<script src="app.js"></script>
+
+</body></html>
